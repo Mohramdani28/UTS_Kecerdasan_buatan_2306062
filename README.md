@@ -1,0 +1,1 @@
+# UTS_Kecerdasan_buatan_2306062

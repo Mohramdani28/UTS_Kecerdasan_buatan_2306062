@@ -1,0 +1,33 @@
+# Sistem Pakar Deteksi Hama Tanaman
+
+# Input gejala
+print("Masukkan kondisi tanaman (y = ya, t = tidak):")
+daun_menguning = input("Apakah daun menguning? (y/t): ")
+bercak_hitam = input("Apakah terdapat bercak hitam? (y/t): ")
+daun_berlubang = input("Apakah daun berlubang? (y/t): ")
+tanaman_layu = input("Apakah tanaman layu? (y/t): ")
+
+# Inferensi Berdasarkan Aturan
+hasil = []
+
+if daun_menguning == 'y' and tanaman_layu == 'y':
+    hasil.append("Kemungkinan terkena Hama Kutu Putih")
+
+if bercak_hitam == 'y':
+    hasil.append("Kemungkinan terkena Hama Jamur")
+
+if daun_berlubang == 'y':
+    hasil.append("Kemungkinan terkena Hama Ulat Daun")
+
+if daun_menguning == 'y' and bercak_hitam == 'y':
+    hasil.append("Kemungkinan terkena Penyakit Bercak Daun")
+
+# Output
+print("\nDiagnosis:")
+if hasil:
+    for h in hasil:
+        print("-", h)
+else:
+    print("- Tidak terdeteksi hama berdasarkan gejala yang diberikan.")
+
+
